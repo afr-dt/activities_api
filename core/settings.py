@@ -42,7 +42,11 @@ THIRD_PARTY_APPS = [
     'rest_framework'
 ]
 
-LOCAL_APPS = ['api']
+LOCAL_APPS = [
+    'apps.property',
+    'apps.activity',
+    'apps.survey'
+]
 
 # Application definition
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS

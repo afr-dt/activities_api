@@ -1,11 +1,13 @@
 # Third party
 from uuid import uuid4
 
+# Djando core models
 from django.db import models
 
 
 class BaseModel(models.Model):
-    """
+    """Project Base model.
+
     Abstract model to inherit to other models in the project
     Fields:
 
