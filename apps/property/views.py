@@ -1,3 +1,19 @@
-from django.shortcuts import render
+# Rest Framework
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 
-# Create your views here.
+# Models
+from .models import Property
+
+# Serializers
+from .serializers import PropertySerializer
+
+
+class PropertyListAPIView(ListCreateAPIView):
+    serializer_class = PropertySerializer
+    queryset = Property.objects.all()
+
+
+class PropertyDetailAPIView(RetrieveUpdateDestroyAPIView):
+    serializer_class = PropertySerializer
+    queryset = Property.objects.all()
+    lookup_field = 'id'
